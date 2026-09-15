@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
+  <path d="M14 6L28 30H0L14 6Z" stroke="#C49A4A" stroke-width="1.75" fill="none" opacity="0.95"/>
+  <circle cx="14" cy="22" r="4" stroke="#C49A4A" stroke-width="1.25" fill="none"/>
+  <text x="40" y="24" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="600" letter-spacing="0.18em" fill="#F4F0E8">CHANG</text>
+  <text x="41" y="38" font-family="'Manrope', sans-serif" font-size="8.5" font-weight="400" letter-spacing="0.32em" fill="#C49A4A">ARCHITECTURES</text>
+</svg>

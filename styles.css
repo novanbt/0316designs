@@ -1,0 +1,187 @@
+:root {
+  /* Design System Colors - Nocturne Atelier */
+  --color-surface: #141311;
+  --color-surface-dim: #141311;
+  --color-surface-bright: #3b3936;
+  --color-surface-lowest: #0f0e0c;
+  --color-surface-low: #1d1b19;
+  --color-surface-container: #211f1d;
+  --color-surface-high: #2b2a27;
+  --color-surface-highest: #363432;
+  --color-on-surface: #e6e2de;
+  --color-on-surface-variant: #d2c5b3;
+  --color-primary: #edc06b;
+  --color-primary-container: #c49a4a;
+  --color-on-primary: #412d00;
+  --color-on-primary-container: #4a3300;
+  --color-secondary: #e9c175;
+  --color-outline: #9b8f7f;
+  --color-outline-variant: #4e4638;
+  
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Resets & Global Typography */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  background-color: var(--color-surface);
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  font-size: 0.9375rem;
+  line-height: 1.625rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  selection-background-color: var(--color-primary-container);
+  selection-color: var(--color-on-primary-container);
+}
+
+::selection {
+  background-color: #c49a4a;
+  color: #141311;
+}
+
+/* Custom Architectural Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0e0c;
+}
+::-webkit-scrollbar-thumb {
+  background: #2b2a27;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c49a4a;
+}
+
+/* Typography Helpers */
+.font-display-hero {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.font-headline {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Ambient Glow & Accent Utilities */
+.glow-gold-hover:hover {
+  box-shadow: 0 0 32px rgba(237, 192, 107, 0.3);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 24px -4px rgba(196, 154, 74, 0.15);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f4f0e8 0%, #edc06b 60%, #c49a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Micro-interactions & Transitions */
+.card-hover-fx {
+  transition: transform 0.6s var(--ease-out-expo), box-shadow 0.6s var(--ease-out-expo), border-color 0.4s ease;
+}
+.card-hover-fx:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 24px rgba(237, 192, 107, 0.08);
+  border-color: rgba(237, 192, 107, 0.45);
+}
+
+/* Image Slow Zoom */
+.zoom-container {
+  overflow: hidden;
+}
+.zoom-container img {
+  transition: transform 0.9s var(--ease-out-expo);
+}
+.zoom-container:hover img {
+  transform: scale(1.045);
+}
+
+/* Hairline borders */
+.border-hairline {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.border-gold-subtle {
+  border: 1px solid rgba(196, 154, 74, 0.3);
+}
+
+/* Keyframes for Hero Ambient Breathing */
+@keyframes ambientPulse {
+  0%, 100% {
+    transform: scale(1.02);
+    opacity: 0.92;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+.animate-ambient {
+  animation: ambientPulse 14s ease-in-out infinite alternate;
+}
+
+/* Modal Backdrops */
+.modal-backdrop {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Toast Notification Animation */
+@keyframes toastSlideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes toastSlideOut {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+.toast-enter {
+  animation: toastSlideIn 0.4s var(--ease-out-expo) forwards;
+}
+
+.toast-exit {
+  animation: toastSlideOut 0.4s var(--ease-out-expo) forwards;
+}
