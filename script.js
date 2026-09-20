@@ -1,5 +1,5 @@
 /**
- * Chang Architectures — Studio Scripts & Micro-interactions
+ * 0316 Designs — Studio Scripts & Micro-interactions
  */
 
 document.addEventListener('DOMContentLoaded', () => {

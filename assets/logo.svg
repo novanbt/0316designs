@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 48" fill="none">
-  <path d="M14 6L28 30H0L14 6Z" stroke="#C49A4A" stroke-width="1.75" fill="none" opacity="0.95"/>
-  <circle cx="14" cy="22" r="4" stroke="#C49A4A" stroke-width="1.25" fill="none"/>
-  <text x="40" y="24" font-family="'Playfair Display', Georgia, serif" font-size="20" font-weight="600" letter-spacing="0.18em" fill="#F4F0E8">CHANG</text>
-  <text x="41" y="38" font-family="'Manrope', sans-serif" font-size="8.5" font-weight="400" letter-spacing="0.32em" fill="#C49A4A">ARCHITECTURES</text>
+  <rect x="2" y="6" width="28" height="28" rx="2" stroke="#C17F59" stroke-width="1.75" fill="none"/>
+  <text x="16" y="25" font-family="'Cormorant Garamond', Georgia, serif" font-size="13" font-weight="600" fill="#C17F59" text-anchor="middle" letter-spacing="0.04em">03</text>
+  <line x1="8" y1="28" x2="24" y2="28" stroke="#C17F59" stroke-width="0.75" opacity="0.5"/>
+  <text x="16" y="36" font-family="'DM Sans', sans-serif" font-size="6" font-weight="500" fill="#F0EDE8" text-anchor="middle" letter-spacing="0.15em">16</text>
+  <text x="42" y="24" font-family="'Cormorant Garamond', Georgia, serif" font-size="22" font-weight="600" letter-spacing="0.12em" fill="#F0EDE8">0316</text>
+  <text x="43" y="38" font-family="'DM Sans', sans-serif" font-size="8.5" font-weight="400" letter-spacing="0.32em" fill="#C17F59">DESIGNS</text>
 </svg>
